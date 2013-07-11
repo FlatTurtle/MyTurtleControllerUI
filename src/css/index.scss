@@ -1,0 +1,182 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+$blue: #2357a6;
+
+*{
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+html,body{
+    height:100%;
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#eee;
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size: 1.3em;
+    margin:0px;
+    padding:0px;
+    margin: 0px;
+    text-transform:uppercase;
+    width:100%;
+}
+
+.hide{
+    display: none;
+}
+
+header{
+    background: #fff;
+    color:$blue;
+    width: 100%;
+    height: 15%;
+    padding: 3%;
+    position: relative;
+
+    .logo{
+        background: url('../img/logo.gif') no-repeat;
+        background-size: contain;
+        width: 50%;
+        height: 100%;
+    }
+}
+
+.nav{
+    width: 100%;
+    height: 10%;
+    padding: 2%;
+    background: $blue;
+    color: #fff
+}
+
+.app{
+    padding: 3%;
+    width: 100%;
+    height: 75%;
+    color: $blue;
+
+    &>section{
+        display: none;
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        &.start{
+            text-align: center;
+
+            label{
+                display: inline-block;
+                width: 100px;
+                margin-left: -100px;
+                text-align: right;
+                padding-right: 20px;
+            }
+
+            input{
+                min-width: 60%;
+            }
+        }
+
+        &.lock{
+            text-align: center;
+        }
+
+        &.settings{
+            #btnExit{
+                position: absolute;
+                bottom: 2%;
+                right: 2%;
+            }
+        }
+    }
+}
+
+.btn{
+    background: #ddd;
+    color:#666;
+    font-size: 20px;
+    padding: 2% 3%;
+    text-decoration:none;
+    outline: none;
+    border: 0px none;
+
+    &.primary{
+        background: $blue;
+        color:#fff;
+    }
+
+    &:disabled{
+        background: #666;
+        color: #ddd;
+    }
+}
+
+.pull-right{
+    float: right;
+}
+
+.pull-left{
+    float: left;
+}
+
+input{
+    padding: 2% 1%;
+    border: 0px none;
+    font-size: 1.4em;
+    margin-bottom: 2%;
+    font-weight: normal;
+    color: $blue;
+}
+
+h1{
+    font-size: 1.8em;
+}
+
+.ui-helper-hidden-accessible{
+    display: none;
+}
+
+.ui-autocomplete{
+    z-index: 999;
+    background: #fff;
+    position: absolute;
+}
+
+.ui-menu {
+    list-style: none;
+    padding: 2px;
+    margin: 0;
+    display: block;
+    outline: none;
+    overflow-y: scroll;
+    max-height: 100%;
+}
+
+.ui-menu .ui-menu-item a {
+    text-decoration: none;
+    display: block;
+    padding: 2%;
+    line-height: 1.5;
+    min-height: 0; /* support: IE7 */
+    font-weight: normal;
+}
+
+.ui-menu .ui-menu-item a.ui-state-focus,
+.ui-menu .ui-menu-item a.ui-state-active {
+    font-weight: normal;
+    background: $blue;
+    color: #fff;
+}
+
+.note{
+    color: #999;
+    text-transform: none;
+}
